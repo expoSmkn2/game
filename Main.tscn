@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://54hg2fqlf6o3"]
+[gd_scene load_steps=41 format=4 uid="uid://54hg2fqlf6o3"]
 
 [ext_resource type="Texture2D" uid="uid://c0wt0mbq7d0lh" path="res://assets/oak_woods_v1.0/oak_woods_v1.0/background/background_layer_1.png" id="1_3dxm6"]
 [ext_resource type="Texture2D" uid="uid://c2snbcdf7gi3n" path="res://assets/oak_woods_v1.0/oak_woods_v1.0/oak_woods_tileset.png" id="1_glv2v"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ytpgoc5d08if" path="res://assets/oak_woods_v1.0/oak_woods_v1.0/decorations/shop.png" id="14_xrxkg"]
 [ext_resource type="Texture2D" uid="uid://rnr6tmg5n03a" path="res://assets/oak_woods_v1.0/oak_woods_v1.0/decorations/shop_anim.png" id="15_sqvbp"]
 [ext_resource type="Texture2D" uid="uid://c5thca45da1iw" path="res://assets/oak_woods_v1.0/oak_woods_v1.0/decorations/sign.png" id="16_hri7i"]
+[ext_resource type="PackedScene" uid="uid://b5sbgthm4wva" path="res://assets/scene/bat.tscn" id="18_kjvhd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03owx"]
 texture = ExtResource("1_3dxm6")
@@ -1287,6 +1288,7 @@ sources/22 = SubResource("TileSetAtlasSource_x3yn0")
 sources/23 = SubResource("TileSetAtlasSource_1w2xm")
 
 [node name="Node2D" type="Node2D"]
+metadata/_edit_vertical_guides_ = [-573.0]
 
 [node name="Tile" type="Node2D" parent="."]
 
@@ -1319,6 +1321,28 @@ tile_set = SubResource("TileSet_r0du0")
 tile_set = SubResource("TileSet_gngx1")
 
 [node name="player" parent="." instance=ExtResource("2_uu6xs")]
-position = Vector2(0, -10)
+position = Vector2(0, -10.000001)
 rotation = 0.039605796
-speed = 5.0
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="bat" parent="." instance=ExtResource("18_kjvhd")]
+position = Vector2(162, -55.000008)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="playercollision" type="StaticBody2D" parent="."]
+visible = false
+rotation = 3.1415925
+scale = Vector2(3.2138705, -2.2028313)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="playercollision"]
+polygon = PackedVector2Array(164.28789, -121.20767, 183.89041, -102.1413, 187.93538, -22.244125, 180.7789, 61.28474, 126.94974, 69.00209, -126.016266, 73.54173, -228.6962, 61.738758, -242.69801, -11.802961, -241.76456, -88.97637, -220.60626, -123.93138, -124.149376, -130.74081, 26.759005, -130.74083, 164.28789, -121.20767, 180.77888, -143.90573, -265.1009, -154.80075, -262.92285, 101.68735, 202.87065, 88.522415, 202.55948, -139.36612, 181.09004, -142.99782)
+
+[node name="batcollision" type="StaticBody2D" parent="."]
+visible = false
+rotation = 3.1415925
+scale = Vector2(3.2138705, -2.2028313)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="batcollision"]
+polygon = PackedVector2Array(173.31126, -127.56314, 141.57382, -121.20768, 162.73212, -103.5032, 161.48752, 33.593098, 118.859795, 31.77726, -102.679924, 3.6317124, -144.06305, 2.723799, -211.89403, -4.5395656, -212.51636, -111.22045, -195.71419, -121.2076, -7.4676437, -120.753685, 25.203241, -120.75369, 141.57382, -121.20768, 180.77888, -143.90573, -265.1009, -154.80075, -262.92285, 101.68735, 202.87065, 88.522415, 202.55948, -139.36612, 181.09004, -142.99782)
