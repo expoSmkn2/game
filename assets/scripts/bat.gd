@@ -69,7 +69,7 @@ func handle_animation():
 				
 				# Setelah animasi selesai, mulai timer untuk menghapus node
 				await get_tree().create_timer(2.0).timeout
-				self.queue_free()
+				
 
 func move(delta):
 	player = Global.playerBody

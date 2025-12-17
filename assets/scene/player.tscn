@@ -664,8 +664,8 @@ script = SubResource("GDScript_ifqy8")
 [node name="animation" type="AnimatedSprite2D" parent="animator"]
 position = Vector2(-2, 1)
 sprite_frames = SubResource("SpriteFrames_1gsj3")
-animation = &"take_damage"
-frame = 3
+animation = &"idle"
+frame = 5
 frame_progress = 1.0
 
 [node name="dashTime" type="Timer" parent="animator"]
@@ -678,6 +678,7 @@ wait_time = 0.8
 wait_time = 3.0
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_ifqy8")
 
@@ -689,6 +690,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_gb3uv")
 
 [node name="playerHitbox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerHitbox"]
 position = Vector2(0, 3)
