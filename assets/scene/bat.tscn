@@ -190,10 +190,19 @@ sprite_frames = SubResource("SpriteFrames_1vjne")
 animation = &"fly"
 frame_progress = 0.09059536
 
+<<<<<<< HEAD
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1tubu")
+
+=======
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1tubu")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

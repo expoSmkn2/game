@@ -242,6 +242,34 @@ region = Rect2(128, 128, 32, 32)
 atlas = ExtResource("3_jn7ie")
 region = Rect2(160, 128, 32, 32)
 
+<<<<<<< HEAD
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4qwe"]
+atlas = ExtResource("3_jn7ie")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fxyf"]
+atlas = ExtResource("3_jn7ie")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_022bn"]
+atlas = ExtResource("3_jn7ie")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fuox"]
+atlas = ExtResource("3_jn7ie")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srhnk"]
+atlas = ExtResource("3_jn7ie")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0pg5c"]
+atlas = ExtResource("3_jn7ie")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfxew"]
+atlas = ExtResource("3_jn7ie")
+=======
 [sub_resource type="AtlasTexture" id="AtlasTexture_gb3uv"]
 atlas = ExtResource("2_jn7ie")
 region = Rect2(0, 96, 32, 32)
@@ -268,6 +296,7 @@ region = Rect2(160, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_srhnk"]
 atlas = ExtResource("2_jn7ie")
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 region = Rect2(192, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_phmki"]
@@ -350,6 +379,18 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_s8ycg")
 }, {
+<<<<<<< HEAD
+"duration": 1.5,
+"texture": null
+}, {
+"duration": 1.5,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+=======
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c61hd")
 }, {
@@ -362,9 +403,15 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qheti")
 }],
+<<<<<<< HEAD
+"loop": false,
+"name": &"dash",
+"speed": 20.0
+=======
 "loop": true,
 "name": &"dash",
 "speed": 14.0
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 }, {
 "frames": [{
 "duration": 1.0,
@@ -397,7 +444,11 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5k1nu")
 }],
+<<<<<<< HEAD
+"loop": false,
+=======
 "loop": true,
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 "name": &"die",
 "speed": 5.0
 }, {
@@ -481,7 +532,11 @@ animations = [{
 }],
 "loop": false,
 "name": &"heavy_attack",
+<<<<<<< HEAD
+"speed": 16.0
+=======
 "speed": 25.0
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 }, {
 "frames": [{
 "duration": 1.0,
@@ -525,18 +580,25 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_61e8l")
 }],
+<<<<<<< HEAD
+"loop": true,
+=======
 "loop": false,
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 "name": &"jump",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
+<<<<<<< HEAD
+=======
 "texture": SubResource("AtlasTexture_gb3uv")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1rsa0")
 }, {
 "duration": 1.0,
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 "texture": SubResource("AtlasTexture_h4qwe")
 }, {
 "duration": 1.0,
@@ -550,10 +612,23 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_srhnk")
+<<<<<<< HEAD
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0pg5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfxew")
+}],
+"loop": false,
+"name": &"light_attack",
+"speed": 20.0
+=======
 }],
 "loop": false,
 "name": &"light_attack",
 "speed": 9.0
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 }, {
 "frames": [{
 "duration": 1.0,
@@ -628,8 +703,18 @@ script = SubResource("GDScript_ifqy8")
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_1gsj3")
 animation = &"dash"
+<<<<<<< HEAD
+frame = 8
+frame_progress = 1.0
+
+[node name="dashTime" type="Timer" parent="animator"]
+wait_time = 0.3
+
+[node name="dashCooldown" type="Timer" parent="animator"]
+=======
 frame = 2
 frame_progress = 0.33028892
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -643,3 +728,8 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_gb3uv")
 
 [connection signal="animation_finished" from="animator/animation" to="." method="_on_animation_animation_finished"]
+<<<<<<< HEAD
+[connection signal="timeout" from="animator/dashTime" to="." method="_on_dash_time_timeout"]
+[connection signal="timeout" from="animator/dashCooldown" to="." method="_on_dash_cooldown_timeout"]
+=======
+>>>>>>> 61aee4f2655cbbf50bdd94a2031b5b8c5662b045
